@@ -16,48 +16,58 @@ function App() {
       price: 18,
       picture:
         "http://kimiumbauten.ch/wp-content/uploads/2018/11/product-7.jpg",
+      sale: true,
+      salePrice: 13,
     },
     {
       name: "Flying Ninja Hoodie",
       price: 35,
       picture:
         "http://kimiumbauten.ch/wp-content/uploads/2018/11/product-4.jpg",
+      sale: false,
     },
     {
       name: "Premium Quality Poster",
       price: 12,
       picture:
         "https://simplyunstuck.com/wp-content/uploads/2013/06/poster_3_up-5.jpg",
+      sale: false,
     },
     {
       name: "Woo Ninja Poster",
       price: 12,
       picture:
         "https://simplyunstuck.com/wp-content/uploads/2013/06/poster_4_up-5.jpg",
+      sale: true,
+      salePrice: 10,
     },
     {
       name: "Premium Quality T-Shirt",
       price: 18,
       picture:
         "http://kimiumbauten.ch/wp-content/uploads/2018/11/product-6.jpg",
+      sale: false,
     },
     {
       name: "Woo Ninja Hoodie",
       price: 35,
       picture:
         "http://kimiumbauten.ch/wp-content/uploads/2018/11/product-1.jpg",
+      sale: false,
     },
     {
       name: "Flying Ninja Poster",
       price: 12,
       picture:
         "https://simplyunstuck.com/wp-content/uploads/2013/06/poster_2_up-5.jpg",
+      sale: false,
     },
     {
       name: "Ship Your Idea Poster",
       price: 12,
       picture:
         "https://simplyunstuck.com/wp-content/uploads/2013/06/poster_1_up-5.jpg",
+      sale: false,
     },
   ];
 
