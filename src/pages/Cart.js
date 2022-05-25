@@ -19,7 +19,7 @@ const Cart = () => {
         {cart && cart.map((x, i) => <ProductInCart product={x} key={i} />)}
       </div>
       <div className="productListCart d-flex justify-content-end">
-        <h2 className="mx-3">Total: {sum.toFixed(2)}$</h2>
+        <h2 className="mx-3">Total: {Number(sum).toFixed(2)}$</h2>
       </div>
     </div>
   );

@@ -11,10 +11,12 @@ const ProductInCart = ({ product }) => {
       </h4>
       {sale && (
         <div>
-          <h1>SALE</h1>
+          <h1 style={{ color: "green" }}>SALE</h1>
         </div>
       )}
-      <h4>{sale ? salePrice.toFixed(2) : price.toFixed(2)}$ </h4>
+      <h4>
+        {sale ? Number(salePrice).toFixed(2) : Number(price).toFixed(2)}${" "}
+      </h4>
     </div>
   );
 };
