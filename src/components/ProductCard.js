@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "./ProductCard.css";
-import mainContext from "../context/mainContext";
+import productsContext from "../context/ProductsContext";
 
 const ProductCard = ({ product }) => {
-  const { cart, setCart } = useContext(mainContext);
+  const { cart, setCart } = useContext(productsContext);
   const { name, price, picture, sale, salePrice } = product;
   const isInCart = cart.filter((x) => x.name === product.name);
   const addToCart = () => {
@@ -28,12 +28,12 @@ const ProductCard = ({ product }) => {
       </h4>
       {sale ? (
         <div>
-          <h4 className="salePrice">{price.toFixed(2)}$</h4>
-          <h4>{salePrice.toFixed(2)}$</h4>
+          <h4 className="salePrice">{Number(price).toFixed(2)}$</h4>
+          <h4>{Number(salePrice).toFixed(2)}$</h4>
         </div>
       ) : (
         <div>
-          <h4>{price.toFixed(2)}$</h4>
+          <h4>{Number(price).toFixed(2)}$</h4>
         </div>
       )}
       {isInCart.length > 0 ? (

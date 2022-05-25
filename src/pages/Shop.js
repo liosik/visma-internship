@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import mainContext from "../context/mainContext";
+import productsContext from "../context/ProductsContext";
 import ProductCard from "../components/ProductCard";
 import "./Shop.css";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
-  const { products } = useContext(mainContext);
+  const { products } = useContext(productsContext);
   return (
     <div className="d-flex">
       <div className="d-flex flex-column productList m-4">
@@ -21,6 +22,11 @@ const Shop = () => {
           {products.map((x, i) => {
             return <ProductCard product={x} key={i} />;
           })}
+        </div>
+        <div className="sticky">
+          <Link to="/addproduct">
+            <button>Add</button>
+          </Link>
         </div>
       </div>
 

@@ -1,16 +1,17 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import mainContext from "./context/mainContext";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import productsContext from "./context/ProductsContext";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import AddProduct from "./pages/AddProduct";
 import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
-  const products = [
+  const [products, setProducts] = useState([
     {
       name: "Flying Ninja T-Shirt",
       price: 18,
@@ -69,14 +70,14 @@ function App() {
         "https://simplyunstuck.com/wp-content/uploads/2013/06/poster_1_up-5.jpg",
       sale: false,
     },
-  ];
-
+  ]);
   return (
-    <mainContext.Provider
+    <productsContext.Provider
       value={{
         cart,
         setCart,
         products,
+        setProducts,
       }}
     >
       <Router>
@@ -85,9 +86,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/addproduct" element={<AddProduct />} />
         </Routes>
       </Router>
-    </mainContext.Provider>
+    </productsContext.Provider>
   );
 }
 

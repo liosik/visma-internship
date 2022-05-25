@@ -1,0 +1,22 @@
+.addProduct{
+    width: 500px;
+    margin: 50px;
+    padding: 10px;
+    border: 5px solid #e4e4e4;
+    color: whitesmoke;
+}
+.addProduct button{
+ background-color: whitesmoke;
+    color: black;
+    width: 390px;
+    opacity: 0.3;
+}
+.addProduct input[type=text]{
+    opacity: 0.3;
+    width: 390px;
+}
+.addProduct input[type=number]{
+    opacity: 0.3;
+    width: 390px;
+}
+

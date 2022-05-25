@@ -1,24 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
-import mainContext from "../context/mainContext";
+import React, { useContext } from "react";
+import productsContext from "../context/ProductsContext";
 import "./Cart.css";
 import ProductInCart from "../components/ProductInCart";
 
 const Cart = () => {
-  const { cart } = useContext(mainContext);
-  const [sum, setSum] = useState(0);
-
-  useEffect(() => {
-    let newSum = 0;
-    cart.forEach((x) => {
-      const { sale, price, salePrice } = x;
-      if (sale) {
-        newSum += salePrice;
-      } else {
-        newSum += price;
-      }
-    });
-    setSum(newSum);
-  }, []);
+  const { cart } = useContext(productsContext);
+  const sum = cart.reduce((total, currentValue) => {
+    return (
+      total +
+      (currentValue.sale
+        ? Number(currentValue.salePrice)
+        : Number(currentValue.price))
+    );
+  }, 0);
   return (
     <div>
       <div className="d-flex flex-column productListCart">
@@ -30,5 +24,4 @@ const Cart = () => {
     </div>
   );
 };
-
 export default Cart;
