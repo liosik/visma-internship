@@ -23,7 +23,7 @@ const Shop = () => {
             return <ProductCard product={x} key={i} />;
           })}
         </div>
-        <div className="sticky">
+        <div className="sticky m-1">
           <Link to="/addproduct">
             <button>Add</button>
           </Link>
