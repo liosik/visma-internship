@@ -12,8 +12,9 @@ const AddProduct = () => {
   const salePriceRef = useRef();
   const nav = useNavigate();
 
-  const addProductToShop = () => {
+  const addProductToShop = async () => {
     const newProduct = {
+      id: products.length,
       name: nameRef.current.value,
       price: priceRef.current.value,
       picture: pictureRef.current.value,
@@ -22,7 +23,18 @@ const AddProduct = () => {
     if (checked) {
       newProduct.salePrice = salePriceRef.current.value;
     }
-    setProducts([...products, newProduct]);
+    const options = {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    };
+    console.log(options);
+    const response = await fetch(`http://localhost:3001/products`, options);
+    const data = await response.json();
+    console.log(data);
+    setProducts([...products, data]);
     nav("/");
   };
 

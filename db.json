@@ -1,6 +1,7 @@
 {
   "products": [
     {
+      "id": 0,
       "name": "Flying Ninja T-Shirt",
       "price": 18,
       "picture": "http://kimiumbauten.ch/wp-content/uploads/2018/11/product-7.jpg",
@@ -8,18 +9,21 @@
       "salePrice": 13
     },
     {
+      "id": 1,
       "name": "Flying Ninja Hoodie",
       "price": 35,
       "picture": "http://kimiumbauten.ch/wp-content/uploads/2018/11/product-4.jpg",
       "sale": false
     },
     {
+      "id": 2,
       "name": "Premium Quality Poster",
       "price": 12,
       "picture": "https://simplyunstuck.com/wp-content/uploads/2013/06/poster_3_up-5.jpg",
       "sale": false
     },
     {
+      "id": 3,
       "name": "Woo Ninja Poster",
       "price": 12,
       "picture": "https://simplyunstuck.com/wp-content/uploads/2013/06/poster_4_up-5.jpg",
@@ -27,28 +31,40 @@
       "salePrice": 10
     },
     {
+      "id": 4,
       "name": "Premium Quality T-Shirt",
       "price": 18,
       "picture": "http://kimiumbauten.ch/wp-content/uploads/2018/11/product-6.jpg",
       "sale": false
     },
     {
+      "id": 5,
       "name": "Woo Ninja Hoodie",
       "price": 35,
       "picture": "http://kimiumbauten.ch/wp-content/uploads/2018/11/product-1.jpg",
       "sale": false
     },
     {
+      "id": 6,
       "name": "Flying Ninja Poster",
       "price": 12,
       "picture": "https://simplyunstuck.com/wp-content/uploads/2013/06/poster_2_up-5.jpg",
       "sale": false
     },
     {
+      "id": 7,
       "name": "Ship Your Idea Poster",
       "price": 12,
       "picture": "https://simplyunstuck.com/wp-content/uploads/2013/06/poster_1_up-5.jpg",
       "sale": false
+    },
+    {
+      "id": 8,
+      "name": "New Product",
+      "price": "123",
+      "picture": "https://ih1.redbubble.net/image.2296915042.4672/ssrco,slim_fit_t_shirt,flatlay,101010:01c5ca27c6,front,wide_portrait,750x1000-bg,f8f8f8.jpg",
+      "sale": true,
+      "salePrice": "12"
     }
   ]
 }
